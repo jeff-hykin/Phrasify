@@ -1,22 +1,11 @@
-SQL stuff
-    part 1:
-    - create a sql database
-    - put all the CSV data in a sql table
+Database stuff
     - Remove duplicates
-    part 2:
-    - add a column to the table, call it something like "simplified title"
-    - convert the title by
-    -- making it all lowercase
-    -- converting/removing weird characters
-    (this will make searches more simple, but we want to keep the original title)
-    part 3:
-    - create a set of all words (any word any song)
-    - add it as a table in SQL
-    part 4:
-    - figure out how to make SQL queries from javascript code (connect to the database, form a query, parse the result)
-
-clean data
-    - remove [Bonus track], (feat. )
+    - add preprocessed titles
+        - run javascript preprocessor function on the titles
+        - remove punctuation
+        - remove [Bonus track], (feat. ), etc
+    - create a "allWords" table in solr
+        - create an efficient way to partial search it
 
 Optimizations
     - index each song with "substitution" lists that allow breaking the song into smaller parts (if possible)
