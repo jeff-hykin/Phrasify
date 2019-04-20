@@ -1,0 +1,1 @@
+curl -X GET "https://api.getsongbpm.com/search/?api_key=YOUR_API_KEY_HERE&type=artist&lookup=green+day"
