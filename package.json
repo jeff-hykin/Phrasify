@@ -1,0 +1,41 @@
+{
+  "name": "csce470-project",
+  "version": "1.0.0",
+  "description": "A Spotify application that creates a playlist whose songs in order are as close as possible to an input sentence.",
+  "main": "index.js",
+  "dependencies": {
+    "aphrodite-jss": "^2.1.0",
+    "css": "^2.2.4",
+    "css-baseline": "^1.1.4",
+    "good-jsx": "^1.0.7",
+    "node-fetch": "^2.3.0",
+    "nodemon": "^1.18.10",
+    "npx": "^10.2.0",
+    "parcel": "^1.12.2",
+    "parcel-bundler": "1.10.3",
+    "quik-backend": "^1.1.0",
+    "quik-dom": "^1.0.6",
+    "quik-history": "^1.1.0",
+    "quik-server": "^2.0.6",
+    "request": "^2.88.0",
+    "roboto-fontface": "^0.10.0",
+    "typeahead": "^0.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npx nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.tamu.edu/Edgarmtz97/csce470-project"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "nodemonConfig": {
+    "ignore": [
+      "computer-generated-code/*"
+    ]
+  }
+}

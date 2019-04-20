@@ -1,0 +1,23 @@
+Welcome to the instructions for how to set up/use Solr! It's not straightforward, so ask Hannah if you get stuck. It's loosely based on the tutorial found here: http://lucene.apache.org/solr/guide/7_7/getting-started.html.
+
+Start by downloading the binary for Solr. It is found here: http://mirrors.sonic.net/apache/lucene/solr/8.0.0/solr-8.0.0.tgz. Extract it to whatever directory you like. You will also need to install Java if it isn't already installed.
+
+Run `ulimit -n 65000` to change the maximum number of open files.
+
+Start by booting up Solr with the command `bin/solr start -e cloud`. For settings, choose 1 cluster and port 8983. It will load for a while, but be patient!
+
+Next it will ask you to create a collection. For the name, choose songs. Choose 1 shard, 1 replica, and the default settings. Once that's done, Solr should be running on port 8983.
+
+Next, set a schema for the songs. Do the schema EXACTLY THIS WAY or you'll get errors.
+First, navigate to http://localhost:8983/solr/#/songs/schema.
+Click the "Add Field" button. Fill out the resulting box like this:
+    * name: song_title
+    * field type: string
+    * MAKE SURE THAT MULTIVALUED IS NOT CHECKED
+Add two more fields the same way, except that name should be song_artist and song_id
+
+Finally, import the data. Make sure you pull the latest changes from Github first. Return to the command line. Run `bin/post -c songs <path_to_docs.csv>`
+
+Now you can go to http://localhost:8983/solr/#/songs/query and query data!
+
+To stop Solr, run `bin/solr stop -all`. You can restart it by running `bin/solr start -e cloud` again. Again choose 1 cluster, port 8983, and the name songs. You should get a message saying that a collection named songs already exists. Choose the "reuse" option, and everything should load back up.

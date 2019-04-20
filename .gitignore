@@ -1,0 +1,6 @@
+.DS_Store
+/node_modules
+config
+computer-generated-code/
+/solr-8.0.0
+v8-compile-cache-0/
