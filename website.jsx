@@ -6,6 +6,9 @@ let Song = require("./code/song")
 let getPlaylists = quik.backend.getPlaylists
 let { blue, green } = require("./code/colors")
 
+// FIXME
+    // when connection is lost, typing is allowed but if the server doesn't respond no error message is given 
+
 let dropdownWrapper = (
     <DropdownInput
         input={{
@@ -108,18 +111,13 @@ async function onInput(e) {
     dropdownWrapper.dropdown.children = []
     // add the new suggestions
     for (let each of startMatches) {
-        console.log('adding suggestion')
-        console.log(`each is:`,each)
-        console.log(`each.title is:`,each.title)
-        let node = <span>{`${each.title}`}</span>
-        dropdownWrapper.dropdown.add(node)
+        dropdownWrapper.dropdown.add(<span>{`${each.title}`}</span>)
     }
     //
     // Change the UI of messages if there are any
     //
     messageContainer.children = []
     for (let each of messages) {
-        console.log('adding message')
         messageContainer.add(<span>{each}</span>)
     }
 }

@@ -1,11 +1,5 @@
-Database stuff
-    - Remove duplicates
-    - add preprocessed titles
-        - run javascript preprocessor function on the titles
-        - remove punctuation
-        - remove [Bonus track], (feat. ), etc
-    - create a "allWords" table in solr
-        - create an efficient way to partial search it
+- create a "allWords" table in solr
+    - create an efficient way to partial search it
 
 Optimizations
     - index each song with "substitution" lists that allow breaking the song into smaller parts (if possible)
