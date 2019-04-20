@@ -109,6 +109,7 @@ async function onInput(e) {
     // add the new suggestions
     for (let each of startMatches) {
         console.log('adding suggestion')
+        console.log(`each is:`,each)
         dropdownWrapper.dropdown.add(<span>{each.title}</span>)
     }
     //
