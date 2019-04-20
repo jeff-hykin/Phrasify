@@ -110,9 +110,9 @@ async function onInput(e) {
     for (let each of startMatches) {
         console.log('adding suggestion')
         console.log(`each is:`,each)
-        let node = <span>{each.title}</span>
-        console.log(`node instanceof Node is:`,node instanceof Node)
-        // dropdownWrapper.dropdown.add(node)
+        console.log(`each.title is:`,each.title)
+        let node = <span>{`${each.title}`}</span>
+        dropdownWrapper.dropdown.add(node)
     }
     //
     // Change the UI of messages if there are any
