@@ -1,14 +1,5 @@
 let data = require('./databaseUtils')
-
-function preprocess(input) {
-    input = input.trim()
-    // replace whitespace with just 1 space
-    input = input.replace(/[\s\t\n\r\v]+/, ' ')
-    // remove non-letters non-apostrophy
-    input = input.replace(/[^\w' ]+/, '')
-    // make lowercase
-    return input.toLowerCase()
-}
+let preprocess = require('./preprocessor')
 
 function removeConfirmedPart(unconfirmedPart, confirmedSongs) {
     console.log(`unconfirmedPart before is:`,unconfirmedPart)
