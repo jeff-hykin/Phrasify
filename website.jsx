@@ -112,7 +112,7 @@ async function onInput(e) {
         console.log(`each is:`,each)
         let node = <span>{each.title}</span>
         console.log(`node instanceof Node is:`,node instanceof Node)
-        dropdownWrapper.dropdown.add(node)
+        // dropdownWrapper.dropdown.add(node)
     }
     //
     // Change the UI of messages if there are any
