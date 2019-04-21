@@ -93,7 +93,7 @@ async function onInput(e) {
         console.log(`currentText is:`, currentText)
         var results = await getPlaylists(currentText, confirmedSongs)
     } catch (e) {
-        console.log(`There was an error on the backend`, e.message)
+        console.error(`There was an error on the backend`, e.message)
     }
     confirmedSongs = results.confirmedSongs
     let { startMatches, messages } = results

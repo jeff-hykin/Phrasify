@@ -12,8 +12,8 @@ let makeRequest = async (phrase, requestFunction) => {
         console.log(`data.response is:`,data.response)
         return data.response.docs
     } catch(err) {
-        console.log("Error getting data from solar:")
-        console.log(err)
+        console.error("Error getting data from solar:")
+        console.error(err)
     }
 }
 
