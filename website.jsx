@@ -38,7 +38,9 @@ let confirmedSongsContainer = (
         style={{
             backgroundColor: green,
             width: "100%",
-            minHeight: "60vh",
+            overflow-y: 'auto',
+            minHeight: "50vh",
+            maxHeight: "50vh",
             color: "white",
             justifyContent: "flex-start",
             marginTop: "1rem",
