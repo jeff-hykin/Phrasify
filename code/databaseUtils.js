@@ -10,12 +10,7 @@ let makeRequest = async (phrase, requestFunction) => {
         var data = await res.json()
         console.log(`requestString is:`,requestString)
         console.log(`data.response is:`,data.response)
-        return data.response.docs.map( each => ({
-            title: each.song_title,
-            artist: each.song_artist,
-            // TODO: change this once the preprocessed data is in Solr
-            preprocessedTitle: preprocess(each.song_title),
-        }))
+        return data.response.docs
     } catch(err) {
         console.log("Error getting data from solar:")
         console.log(err)
