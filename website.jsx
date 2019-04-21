@@ -75,10 +75,15 @@ document.head = (
 
 document.body = (
     <body>
-        <div style="height: 15vh;" />
-        <h2 style={{ minHeight: "1em", fontFamily: "Roboto", fontWeight: 100 }}>Phrasify</h2>
-        {messageContainer}
-        {dropdownWrapper}
+        <div style={{
+            minHeight: "50vh",
+            maxHeight: "50vh"
+        }}>
+            <div style="height: 15vh;" />
+            <h2 style={{ minHeight: "1em", fontFamily: "Roboto", fontWeight: 100 }}>Phrasify</h2>
+            {messageContainer}
+            {dropdownWrapper}
+        </div>
         {confirmedSongsContainer}
     </body>
 )
