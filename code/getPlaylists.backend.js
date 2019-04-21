@@ -18,13 +18,13 @@ function removeConfirmedPart(unconfirmedPart, confirmedSongs) {
         }
         
         if (!fullyConfirmed) {
-            unconfirmedPart = unconfirmedWords.join(' ')
             break
         }
         // update the unconfirmed words
         unconfirmedWords = maybeUnconfirmedWords
         reconfirmedSongs.push(eachConfirmedSong)
     }
+    unconfirmedPart = unconfirmedWords.join(' ')
     return [unconfirmedPart, reconfirmedSongs]
 }
 
