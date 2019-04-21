@@ -3,17 +3,27 @@ let preprocess = require('./preprocessor')
 
 function removeConfirmedPart(unconfirmedPart, confirmedSongs) {
     console.log(`unconfirmedPart before is:`,unconfirmedPart)
+    let unconfirmedWords = unconfirmedPart.split(' ')
     let reconfirmedSongs = []
     for (let eachConfirmedSong of confirmedSongs) {
-        let eachTitle = eachConfirmedSong.preprocessedTitle
-        if (!unconfirmedPart.startsWith(eachTitle)) {
-            break;
-        // remove the matched part
-        // re-confirm each song (because the input has changed since last confirmation)
-        } else {
-            unconfirmedPart = unconfirmedPart.substr(eachTitle.length, unconfirmedPart.length).trim()
-            reconfirmedSongs.push(eachConfirmedSong)
+        let wordsInTitle = eachConfirmedSong.preprocessedTitle.split(' ')
+        let maybeUnconfirmedWords = [...unconfirmedWords]
+        let fullyConfirmed = true
+        for (let eachConfirmedTitleWord of wordsInTitle) {
+            let nextUnconfirmedWord = maybeUnconfirmedWords.pop()
+            if (eachConfirmedTitleWord != nextUnconfirmedWord) {
+                fullyConfirmed = false
+                break
+            }
         }
+        
+        if (!fullyConfirmed) {
+            unconfirmedPart = unconfirmedWords.join(' ')
+            break
+        }
+        // update the unconfirmed words
+        unconfirmedWords = maybeUnconfirmedWords
+        reconfirmedSongs.push(eachConfirmedSong)
     }
     return [unconfirmedPart, reconfirmedSongs]
 }
