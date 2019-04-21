@@ -66,14 +66,14 @@ let messageContainer = (
 
 document.head = (
     <head>
-        <title>Phraseify</title>
+        <title>Phrasify</title>
     </head>
 )
 
 document.body = (
     <body>
         <div style="height: 15vh;" />
-        <h2 style={{ minHeight: "1em", fontFamily: "Roboto", fontWeight: 100 }}>Phraseify</h2>
+        <h2 style={{ minHeight: "1em", fontFamily: "Roboto", fontWeight: 100 }}>Phrasify</h2>
         {messageContainer}
         {dropdownWrapper}
         {confirmedSongsContainer}
