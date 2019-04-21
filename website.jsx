@@ -20,6 +20,8 @@ let dropdownWrapper = (
                 borderBottom: "solid gray 2px",
                 fontSize: "1.2rem",
                 paddingTop: "0.4rem",
+                width: '14rem',
+                maxWidth: '90vw',
             },
         }}
         dropdown={{
