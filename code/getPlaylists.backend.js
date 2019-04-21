@@ -10,7 +10,7 @@ function removeConfirmedPart(unconfirmedPart, confirmedSongs) {
         let maybeUnconfirmedWords = [...unconfirmedWords]
         let fullyConfirmed = true
         for (let eachConfirmedTitleWord of wordsInTitle) {
-            let nextUnconfirmedWord = maybeUnconfirmedWords.pop()
+            let nextUnconfirmedWord = maybeUnconfirmedWords.shift()
             if (eachConfirmedTitleWord != nextUnconfirmedWord) {
                 fullyConfirmed = false
                 break
