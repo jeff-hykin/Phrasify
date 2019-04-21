@@ -25,14 +25,18 @@ CSV.foreach("./docs.csv") do |row|
         # // replace amperstands with &
         title.gsub!(/&/, ' and ')
         # // remove non-letter-non-whitespace characters
+        title_before_length = title.length
         title.gsub!(/[^\w ]+/, '')
+        skip_song = (title.length + 8 < title_before_length)
         # // replace whitespace with just 1 space
         title.gsub!(/[\s\t\n\r\v]+/, ' ')
         # // remove trailing whitespace
         title.strip!
     
     # process title
-    open('preprocessed_docs.csv', 'a') do |f|
-        f.puts( row_with_no_newline + ',' + title )
+    if !skip_song
+        open('preprocessed_docs.csv', 'a') do |f|
+            f.puts( row_with_no_newline + ',' + title )
+        end
     end
 end

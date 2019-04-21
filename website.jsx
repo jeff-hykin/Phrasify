@@ -8,6 +8,7 @@ let { blue, green } = require("./code/colors")
 
 // FIXME
     // when connection is lost, typing is allowed but if the server doesn't respond no error message is given 
+    // windows scrollbars on suggestions
 
 let dropdownWrapper = (
     <DropdownInput
@@ -29,7 +30,7 @@ let dropdownWrapper = (
                 padding: "0.2rem",
                 color: "gray",
                 height: "5.3em",
-                overflow: "scroll",
+                overflow: "auto",
             },
         }}
     />
