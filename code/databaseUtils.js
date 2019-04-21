@@ -20,15 +20,15 @@ let makeRequest = async (phrase, requestFunction) => {
 module.exports = {
     songsWithExactPreprocessedTitle: async (phrase) => {
         // return songTable.filter(each => each.preprocessedTitle == title)
-        return makeRequest(phrase, (phrase) =>"http://localhost:8983/solr/songs/select?q=title:" + phrase )
+        return makeRequest(phrase, (phrase) =>"http://localhost:8983/solr/songs/select?q=preprocessedTitle:" + phrase )
     },
     songsWithPreprocessedTitleThatStartsWith: (phrase) => {
         // return songTable.filter(each => each.preprocessedTitle.startsWith(title))
-        return makeRequest(phrase, (phrase) =>"http://localhost:8983/solr/songs/select?q=title:" + phrase + "*" )
+        return makeRequest(phrase, (phrase) =>"http://localhost:8983/solr/songs/select?q=preprocessedTitle:" + phrase + "*" )
     },
     songsWhosePreprocessedTitleContains: (phrase) => {
         // return songTable.filter( each => each.preprocessedTitle.match(phrase))
-        return makeRequest(phrase, (phrase) =>"http://localhost:8983/solr/songs/select?q=title:/.*" + phrase + ".*/")
+        return makeRequest(phrase, (phrase) =>"http://localhost:8983/solr/songs/select?q=preprocessedTitle:/.*" + phrase + ".*/")
     },
     wordExistsInAtLeastOneSong: (word) => allWords[word],
     thereIsAWordThatStartsWith: (partialWord) => {
