@@ -36,17 +36,18 @@ let dropdownWrapper = (
     />
 )
 
+let marginTop = "1rem"
 let confirmedSongsContainer = (
     <div
         style={{
             backgroundColor: green,
             width: "100%",
             overflowY: 'auto',
-            minHeight: "50vh",
-            maxHeight: "50vh",
+            minHeight: `calc(50vh - ${marginTop})`,
+            maxHeight: `calc(50vh - ${marginTop})`,
             color: "white",
             justifyContent: "flex-start",
-            marginTop: "1rem",
+            marginTop: marginTop,
             paddingTop: "1.6rem",
             flexDirection: "column",
         }}
@@ -76,6 +77,7 @@ document.head = (
 document.body = (
     <body>
         <div style={{
+            flexDirection: 'column',
             minHeight: "50vh",
             maxHeight: "50vh"
         }}>
