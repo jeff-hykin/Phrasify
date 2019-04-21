@@ -8,10 +8,16 @@ const sheet = StyleSheet.create({
     },
     dropdown: {
         display: 'flex',
+        overflowY: 'scroll',
+        maxWidth: '15rem',
+        overflowX: 'visible',
+        flexWrap: 'nowrap',
+        whiteSpace: 'nowrap',
         flexDirection: 'column',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
-        width: '100%'
+        width: '100%',
+        whiteSpace: 'nowrap'
     }
 })
 
