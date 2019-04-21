@@ -1,6 +1,8 @@
 let data = require('./databaseUtils')
 let preprocess = require('./preprocessor')
 
+console.log = _=>0
+
 function removeConfirmedPart(unconfirmedPart, confirmedSongs) {
     console.log(`unconfirmedPart before is:`,unconfirmedPart)
     let unconfirmedWords = unconfirmedPart.split(' ')
