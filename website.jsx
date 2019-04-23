@@ -8,7 +8,6 @@ let { blue, green } = require("./code/colors")
 
 // FIXME
     // when connection is lost, typing is allowed but if the server doesn't respond no error message is given 
-    // windows scrollbars on suggestions
 
 let dropdownWrapper = (
     <DropdownInput
@@ -67,6 +66,9 @@ let messageContainer = (
         <span>Hello</span>
     </div>
 )
+
+// set the root font size 
+document.querySelector(":root").style.fontSize = "20px"
 
 document.head = (
     <head>
