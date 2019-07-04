@@ -6,6 +6,7 @@ app.quikAdd("quik-dom")             // this does the JSX magic
 
 app.settings = {
     // default settings (all are optional)
+    port: 3030,
     websiteFile: "./website.jsx",
     codeFolder: "./code",
     bundlerOptions: {}, // see https://parceljs.org/api.html for options
