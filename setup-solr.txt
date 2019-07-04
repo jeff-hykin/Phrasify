@@ -1,5 +1,11 @@
 Welcome to the instructions for how to set up/use Solr! It's not straightforward, so ask Hannah if you get stuck. It's loosely based on the tutorial found here: http://lucene.apache.org/solr/guide/7_7/getting-started.html.
 
+Jeff:
+    you can probably just run:
+    cd /home/terrestrial/470-project/solr-8.0.0/
+    bin/solr start -cloud -p 8983 -s "example/cloud/node1/solr" -force
+
+
 Start by downloading the binary for Solr. It is found here: http://mirrors.sonic.net/apache/lucene/solr/8.0.0/solr-8.0.0.tgz. Extract it to whatever directory you like. You will also need to install Java if it isn't already installed.
 
 Run `ulimit -n 65000` to change the maximum number of open files.
