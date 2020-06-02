@@ -11,7 +11,7 @@ app.settings = {
     codeFolder: "./code",
     bundlerOptions: {}, // see https://parceljs.org/api.html for options
     afterServerStarted: () => {
-        console.log(`Server running on http://localhost:3000`)
+        console.log(`Server running on http://localhost:3030`)
     }
 }
 app.start()

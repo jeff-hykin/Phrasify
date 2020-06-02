@@ -21,7 +21,10 @@
     "roboto-fontface": "^0.10.0",
     "typeahead": "^0.2.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2"
+  },
   "scripts": {
     "start": "npx nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
