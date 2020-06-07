@@ -6,7 +6,7 @@
   "dependencies": {
     "aphrodite-jss": "^2.1.0",
     "css": "^2.2.4",
-    "css-baseline": "^1.1.4",
+    "css-baseline": "^1.1.10",
     "good-jsx": "^1.0.7",
     "node-fetch": "^2.3.0",
     "nodemon": "^1.18.10",
