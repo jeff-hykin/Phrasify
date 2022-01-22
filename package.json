@@ -8,7 +8,7 @@
     "css": "^2.2.4",
     "css-baseline": "^1.1.10",
     "good-jsx": "^1.0.7",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^3.1.1",
     "nodemon": "^1.18.10",
     "npx": "^10.2.2",
     "parcel": "^1.12.4",
